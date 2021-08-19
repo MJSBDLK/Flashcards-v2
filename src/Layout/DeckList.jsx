@@ -21,7 +21,7 @@ export default function DeckList() {
 
   return (
       <div>
-        {decks.map((deck) => <DeckCard key={deck.id} deckId={deck.id} />)}
+        {decks.map((deck) => <DeckCard key={deck.id} deck={deck} />)}
       </div>
   );
 }

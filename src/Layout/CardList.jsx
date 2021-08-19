@@ -28,8 +28,8 @@ export default function CardList({type, deckId}) {
 
   return (
       <div>
-        {type.includes(`deck`) && cards.map((deck) => <DeckCard deckId={deck.id} />)}
-        {type.includes(`card`) && cards.map((card) => <CardCard cardId={card.id} />)}
+        {type.includes(`deck`) && cards.map((deck) => <DeckCard deck={deck} key={deck.id} />)}
+        {type.includes(`card`) && cards.map((card) => <CardCard card={card} key={card.id} />)}
       </div>
   );
 }

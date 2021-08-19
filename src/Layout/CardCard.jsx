@@ -3,23 +3,7 @@ import React, { useState, useEffect } from "react";
 import { readCard } from "../utils/api";
 import DeleteButton from "./Buttons/DeleteButton";
 
-export default function CardCard({ cardId }) {
-  const [card, setCard] = useState({});
-
-  useEffect(() => {
-    const abortController = new AbortController();
-
-    async function fetchCard() {
-      try {
-        const response = await readCard(cardId, abortController.signal);
-        setCard(response);
-      } catch (error) {
-        console.log(`Error in CardCard.js - fetchCard: `, error);
-      }
-    }
-    fetchCard();
-    return () => abortController.abort();
-  }, [cardId]);
+export default function CardCard({ card }) {
 
   return (
     <div className="card">

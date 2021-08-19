@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { listCards, readDeck } from "../../utils/api";
 import { Link } from "react-router-dom";
-import AddCardsButton from "../Buttons/AddCardsButton";
+import AddCardsButton from '../Buttons/AddCardsButton';
 
 export default function Study() {
   const { deckId } = useParams(); // console.log(`DeckId: `, deckId)
