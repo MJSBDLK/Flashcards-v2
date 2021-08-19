@@ -1,5 +1,5 @@
 
-Flashcard-o-matic
+#Flashcard-o-matic
 
 This app allows for users to save and make decks of flash cards.
 
