@@ -1,6 +1,5 @@
 import EditButton from "./Buttons/EditButton";
-import React, { useState, useEffect } from "react";
-import { readCard } from "../utils/api";
+import React from "react";
 import DeleteButton from "./Buttons/DeleteButton";
 
 export default function CardCard({ card }) {

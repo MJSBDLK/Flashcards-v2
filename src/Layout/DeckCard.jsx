@@ -1,8 +1,7 @@
 import ViewButton from "./Buttons/ViewButton";
 import StudyButton from "./Buttons/StudyButton";
 import DeleteButton from "./Buttons/DeleteButton";
-import React, { useEffect, useState } from "react";
-import { readDeck } from "../utils/api/index";
+import React from "react";
 
 export default function DeckCard({ deck }) {
 
