@@ -1,8 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function NewDeckButton({deckId}) {
+export default function AddCardsButton({deckId}) {
   return (
-    <Link type="button" className="btn btn-secondary newDeckButton m-1" to="/decks/new">
+    <Link type="button" className="btn btn-primary addCardsButton m-1" to={`/decks/${deckId}/cards/new`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -13,7 +14,7 @@ export default function NewDeckButton({deckId}) {
       >
         <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path>
       </svg>
-      New Deck
+      Add Cards
     </Link>
   );
 }

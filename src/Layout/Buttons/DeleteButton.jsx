@@ -1,3 +1,4 @@
+import React from 'react';
 import { deleteCard, deleteDeck } from "../../utils/api/index";
 import { useHistory } from "react-router";
 

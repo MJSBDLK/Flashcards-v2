@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link, useHistory } from "react-router-dom";
-import { readDeck, updateDeck } from "../utils/api";
+import { readDeck, updateDeck } from "../../utils/api";
 
 export default function EditDeck() {
   const history = useHistory();
@@ -53,7 +53,7 @@ export default function EditDeck() {
   };
 
   return (
-    <>
+    <div>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item">
@@ -70,7 +70,7 @@ export default function EditDeck() {
       <h2>Edit Deck</h2>
       <form id="edit-deck-form" onSubmit={submitHandler}>
         <div className="mb-3">
-          <label for="edit-deck-name-input">Name</label>
+          <label htmlFor="edit-deck-name-input">Name</label>
           <input
             type="input"
             className="form-control"
@@ -80,7 +80,7 @@ export default function EditDeck() {
           ></input>
         </div>
         <div className="mb-3">
-          <label for="edit-deck-description-area">Description</label>
+          <label htmlFor="edit-deck-description-area">Description</label>
           <textarea
             id="edit-deck-description-textarea"
             className="form-control"
@@ -96,6 +96,6 @@ export default function EditDeck() {
           Submit
         </button>
       </form>
-    </>
+    </div>
   );
 }

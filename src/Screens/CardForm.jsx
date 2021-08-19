@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link, useHistory } from "react-router-dom";
-import { readDeck, readCard, updateCard, createCard } from "../utils/api";
+import { readDeck, readCard, updateCard, createCard } from "../../utils/api";
 
-export default function Edit({ edit }) {
+export default function CardForm({ edit }) {
   const { deckId, cardId } = useParams();
   const history = useHistory();
 

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { listCards, readDeck } from "../utils/api";
+import { listCards, readDeck } from "../../utils/api";
 import { Link } from "react-router-dom";
-import AddCardsButton from "../Layout/Buttons/AddCardsButton";
+import AddCardsButton from "../Buttons/AddCardsButton";
 
 export default function Study() {
   const { deckId } = useParams(); // console.log(`DeckId: `, deckId)
@@ -58,16 +58,16 @@ export default function Study() {
   // console.log(`cards[cardNumber]: `, cards[cardNumber]);
 
   return (
-    <>
+    <div>
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item">
             <Link to="/">Home</Link>
           </li>
-          <li class="breadcrumb-item">
+          <li className="breadcrumb-item">
             <Link to={`/decks/${deckId}`}>{`${deck.name}`}</Link>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">
+          <li className="breadcrumb-item active" aria-current="page">
             Study
           </li>
         </ol>
@@ -86,7 +86,7 @@ export default function Study() {
             )}
             <button
               type="button"
-              class="btn btn-secondary m-1"
+              className="btn btn-secondary m-1"
               onClick={() => handleFlip()}
             >
               Flip
@@ -94,7 +94,7 @@ export default function Study() {
             {nextVis && (
               <button
                 type="button"
-                class="btn btn-primary m-1"
+                className="btn btn-primary m-1"
                 onClick={() => handleNext()}
               >
                 Next
@@ -112,6 +112,6 @@ export default function Study() {
           <AddCardsButton deckId={deckId} />
         </div>
       )}
-    </>
+    </div>
   );
 }

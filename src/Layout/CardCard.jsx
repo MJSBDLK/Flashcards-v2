@@ -1,5 +1,5 @@
 import EditButton from "./Buttons/EditButton";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { readCard } from "../utils/api";
 import DeleteButton from "./Buttons/DeleteButton";
 

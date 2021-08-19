@@ -5,17 +5,17 @@ import {Switch, Route} from 'react-router-dom';
 import Header from "./Header";
 import NotFound from "./NotFound";
 // Import Screens
-import Home from "../Screens/Home";
-import Study from "../Screens/Study";
-import CreateDeck from "../Screens/CreateDeck";
-import Deck from "../Screens/Deck";
-import EditDeck from "../Screens/EditDeck";
-import CardForm from "../Screens/CardForm";
+import Home from "./Screens/Home";
+import Study from "./Screens/Study";
+import CreateDeck from "./Screens/CreateDeck";
+import Deck from "./Screens/Deck";
+import EditDeck from "./Screens/EditDeck";
+import CardForm from "./Screens/CardForm";
 
 function Layout() {
 
   return (
-    <>
+    <div>
       <Header />
       <div className="container">
         {/* TODO: Implement the screen starting here */}
@@ -32,7 +32,7 @@ function Layout() {
           </Route>
         </Switch>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DeckCard from "./DeckCard";
 import { listDecks } from "../utils/api";
 
@@ -20,8 +20,8 @@ export default function DeckList() {
   }, []);
 
   return (
-      <>
-        {decks.map((deck) => <DeckCard deckId={deck.id} />)}
-      </>
+      <div>
+        {decks.map((deck) => <DeckCard key={deck.id} deckId={deck.id} />)}
+      </div>
   );
 }

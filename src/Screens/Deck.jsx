@@ -1,12 +1,12 @@
 import { useParams } from "react-router";
-import { readDeck } from "../utils/api";
+import { readDeck } from "../../utils/api";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import EditButton from "../Layout/Buttons/EditButton";
-import StudyButton from "../Layout/Buttons/StudyButton";
-import AddCardsButton from "../Layout/Buttons/AddCardsButton";
-import DeleteButton from "../Layout/Buttons/DeleteButton";
-import CardList from "../Layout/CardList";
+import React, { useState, useEffect } from "react";
+import EditButton from "../Buttons/EditButton";
+import StudyButton from "../Buttons/StudyButton";
+import AddCardsButton from "../Buttons/AddCardsButton";
+import DeleteButton from "../Buttons/DeleteButton";
+import CardList from "../CardList";
 
 export default function Deck() {
   const [deck, setDeck] = useState({});
@@ -33,7 +33,7 @@ export default function Deck() {
   // console.log(`Deck.js - deck: `, deck)
 
   return (
-    <>
+    <div>
       <div className="mb-3">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
@@ -60,6 +60,6 @@ export default function Deck() {
       </div>
       <h3>Cards</h3>
       <CardList type={`card`} deckId={deckId} />
-    </>
+    </div>
   );
 }

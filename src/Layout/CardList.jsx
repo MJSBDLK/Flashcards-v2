@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardCard from "./CardCard";
 import DeckCard from './DeckCard'
 import { listDecks, listCards } from "../utils/api";
@@ -27,9 +27,9 @@ export default function CardList({type, deckId}) {
   }, [type, deckId]);
 
   return (
-      <>
+      <div>
         {type.includes(`deck`) && cards.map((deck) => <DeckCard deckId={deck.id} />)}
         {type.includes(`card`) && cards.map((card) => <CardCard cardId={card.id} />)}
-      </>
+      </div>
   );
 }

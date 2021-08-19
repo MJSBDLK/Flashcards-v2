@@ -1,7 +1,7 @@
 import ViewButton from "./Buttons/ViewButton";
 import StudyButton from "./Buttons/StudyButton";
 import DeleteButton from "./Buttons/DeleteButton";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { readDeck, listCards } from "../utils/api/index";
 
 export default function DeckCard({ deckId }) {
@@ -26,7 +26,7 @@ export default function DeckCard({ deckId }) {
     fetchData();
     // useEffect only ever invokes this function if the component is un-loaded
     return () => {
-      console.log(`DeckCard component was unloaded.`);
+      // console.log(`DeckCard component was unloaded.`);
       return abortController.abort();
     };
   }, [deckId]);
